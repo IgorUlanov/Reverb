@@ -1,4 +1,4 @@
-#include <stdint.h>
+﻿#include <stdint.h>
 #include <stm32f10x.h>
 #include "common.h"
 
@@ -15,9 +15,9 @@ extern void Delay_long_defuse(void);	// задержка от 50 мс до ма�
 extern void Delay_short_defuse(void); // задержка от 0.26мс до 51.2мс, c примешиванием повторов
 extern void NM3011(void); // эмуляция ревербератора на основе микросхемы mn3011
 extern void Dattorro(void); // ревербератор по алгоритму Dattorro
-extern void Gardner_small_room(void); // ревербератор по алгоритму Gardner Small Room Reverberator
-extern void Gardner_medium_room(void); // ревербератор по алгоритму Gardner Medium Room Reverberator
-extern void Gardner_large_room(void); // ревербератор по алгоритму Gardner Large Room Reverberator
+extern void Mikelson_small_room(void); // ревербератор по алгоритму Mikelson Small Room Reverberator
+extern void Mikelson_medium_room(void); // ревербератор по алгоритму Mikelson Medium Room Reverberator
+extern void Mikelson_large_room(void); // ревербератор по алгоритму Mikelson Large Room Reverberator
 
 void DMA2_Channel1_IRQHandler(void)
 {
@@ -45,9 +45,9 @@ void DMA2_Channel1_IRQHandler(void)
 		  case 3: Delay_short_defuse(); break;
 		  case 4: NM3011(); break;
 		  case 5: Dattorro(); break;
-		  case 6: Gardner_small_room(); break;
-		  case 7: Gardner_medium_room(); break;
-		  case 8: Gardner_large_room();	break;
+		  case 6: Mikelson_small_room(); break;
+		  case 7: Mikelson_medium_room(); break;
+		  case 8: Mikelson_large_room();	break;
 		  }
 		  delay_in_index++;
 		}

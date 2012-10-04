@@ -1,4 +1,4 @@
-/*
+﻿/*
  * reverb.c
  *
  *  Created on: 27.09.2012
@@ -354,9 +354,9 @@ void Dattorro(void)
   analog_dac[1]=(int16_t)x; // аудио сигнал готовый для вывода на ЦАП
 }
 
-void Gardner_small_room(void)
+void Mikelson_small_room(void)
 {
-	// ревербератор по алгоритму Gardner Small Room Reverberator
+	// ревербератор по алгоритму Hans Mikelson Small Room Reverberator
 	// http://fc.mbs.net/~pfisher/FOV2-0010016C/FOV2-0010016E/FOV2-001001A3/book/chapters/24mikelson/index.html
 	if (ar.s.predelay_step>SR_PREDELAY_COUNT-1) ar.s.predelay_step=0;
 	if (ar.s.double1_step>SR_DOUBLE1_DELAY-1) ar.s.double1_step=0;
@@ -410,7 +410,7 @@ void Gardner_small_room(void)
 	analog_dac[1]=(int16_t)y; // аудио сигнал готовый для вывода на ЦАП
 }
 
-void Gardner_medium_room(void)
+void Mikelson_medium_room(void)
 {
   // ревербератор по алгоритму Gardner Medium Room Reverberator
   if (ar.m.double1_step>MR_DOUBLE1_DELAY-1) ar.m.double1_step=0;
@@ -493,7 +493,7 @@ void Gardner_medium_room(void)
   analog_dac[1]=(int16_t)y; // аудио сигнал готовый для вывода на ЦАП
 }
 
-void Gardner_large_room(void)
+void Mikelson_large_room(void)
 {
   // ревербератор по алгоритму Gardner Large Room Reverberator
   if (ar.l.allpass1_step>LR_ALLPASS1_DELAY-1) ar.l.allpass1_step=0;

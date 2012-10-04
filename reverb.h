@@ -1,4 +1,4 @@
-/*
+﻿/*
  * reverb.h
  *
  *  Created on: 10.08.2012
@@ -140,7 +140,7 @@ typedef struct {
 
 typedef struct
 {
-  //  структура данных для эффекта ревербератор по алгоритму Gardner'a Small Room
+  //  структура данных для эффекта ревербератор по алгоритму Mikelson'a Small Room
   uint16_t predelay_step;
   uint16_t double1_step;
   uint16_t double2_step;
@@ -157,7 +157,7 @@ typedef struct
 
 typedef struct
 {
-  //  структура данных для эффекта ревербератор по алгоритму Gardner'a Medium Room
+  //  структура данных для эффекта ревербератор по алгоритму Mikelson'a Medium Room
   uint16_t double1_step;
   uint16_t double2_step;
   uint16_t double3_step;
@@ -182,7 +182,7 @@ typedef struct
 
 typedef struct
 {
-  //  структура данных для эффекта ревербератор по алгоритму Gardner'a Medium Room
+  //  структура данных для эффекта ревербератор по алгоритму Mikelson'a Medium Room
   uint16_t allpass1_step;
   uint16_t allpass2_step;
   uint16_t delay4ms_step;
